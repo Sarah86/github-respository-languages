@@ -30,11 +30,16 @@ function App() {
     e.preventDefault();
     if (query) {
       setLoading(true);
+      setError("");
       fetch(
         `https://api.github.com/search/repositories?q="${query}"&per_page=1000`
       )
         .then((response) => {
-          return response.json();
+          if (response.ok) {
+            return response.json();
+          } else {
+            setError("Error: " + response.status);
+          }
         })
         .then((json) => {
           setTotalCount(json.total_count);
@@ -54,11 +59,14 @@ function App() {
             }));
             setResult(finalResult);
           }
+          if (json.message) {
+            setError(json.message);
+          }
           setLoading(false);
         })
-        .catch((error) => {
+        .catch((err) => {
+          alert(err);
           setLoading(false);
-          setError(error);
         });
     }
   };

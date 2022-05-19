@@ -76,7 +76,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Holly Health Test</h1>
+      <h1>Github Repository Search</h1>
       <form onSubmit={onSubmit}>
         <input
           type="text"

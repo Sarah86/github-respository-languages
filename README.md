@@ -17,3 +17,5 @@ You may also see any lint errors in the console.
 ## How to use the app
 
 This app searches for repositories in the Github by the input query in the name, the description, or the README. It returns a table with the languages used in the found projects in descending order. The table does not show respositores with empty languages. In the end of the table you will find also the total of the repositories found with the searched terms.
+
+The app is published in [https://main--clinquant-gumdrop-2a04d3.netlify.app/](https://main--clinquant-gumdrop-2a04d3.netlify.app/)

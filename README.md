@@ -1,4 +1,4 @@
-# Holly Health Test
+# Github Repository Search
 
 This project was made using [Github API](https://docs.github.com/en/rest) with unanthenticated calls, so the limit is 30 calls per minute.
 
